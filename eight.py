@@ -45,4 +45,3 @@ for number in numbers:
 				largest = product
 	count = count + 1
 print(largest, "is the largest")	
-##23514624000
