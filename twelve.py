@@ -6,9 +6,15 @@ while divisors < 500:
 	divisors = 1
 	number = n
 	triangleNumber = ((n + 1) *  n)/2
-	for x in range(1,n+1):
+	divisorsList = []
+	squareRoot = int(triangleNumber ** 0.5)
+	for x in range(1,squareRoot):
+		if x in divisorsList:
+			break
 		if triangleNumber % x == 0:
-			divisors = divisors + 1
+			divisorsList.append(triangleNumber/x)
+			divisors = divisors + 2
+	print(number,triangleNumber,divisors)
 	n = n + 1
 print("this is the number and its divisors",number,triangleNumber,divisors)
-##41041 550
+##76576500
